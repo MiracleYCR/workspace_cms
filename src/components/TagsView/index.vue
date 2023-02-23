@@ -1,9 +1,9 @@
 <template>
-  <div class="tags-view-container">
+  <div class="TagViewComp">
     <router-link
+      class="TagViewItem"
       v-for="(item, index) in $store.getters.tagsViewList"
       :key="item.fullPath"
-      class="tags-view-item"
       :class="isActive(item) ? 'active' : ''"
       :to="{ path: item.fullPath }"
       :style="{
@@ -12,9 +12,8 @@
       }"
       @contextmenu.prevent="onOpenMenu($event, index)"
       >{{ item.title }}
-      <SvgIcon
-        class="el-icon-close"
-        icon="close"
+      <i
+        class="bi bi-x-circle"
         v-show="!isActive(item)"
         @click.prevent.stop="onClose(index)"
       />
@@ -76,14 +75,14 @@ watch(menuVisible, (val) => {
 </script>
 
 <style lang="scss" scoped>
-.tags-view-container {
+.TagViewComp {
   height: 45px;
   line-height: 45px;
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #d8dce5;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
-  .tags-view-item {
+  .TagViewItem {
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -97,6 +96,8 @@ watch(menuVisible, (val) => {
     font-size: 12px;
     margin-left: 5px;
     margin-top: 4px;
+    text-decoration: none;
+
     &:first-of-type {
       margin-left: 15px;
     }

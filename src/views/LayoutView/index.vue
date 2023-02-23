@@ -31,24 +31,25 @@ import TagsViewComp from "@/components/TagsView/index.vue";
   position: relative;
   width: 100%;
   height: 100%;
+}
 
-  .LayoutViewHeader {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 999;
-    width: calc(100% - 210px);
-    transition: width 0.28s;
-  }
-  .HideSideBar .LayoutViewHeader {
-    width: calc(100% - 60px);
-  }
+.LayoutViewHeader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  width: calc(100% - 210px);
+  transition: width 0.28s;
+}
 
-  .LayoutViewWrapper {
-    min-height: 100%;
-    margin-left: 210px;
-    transition: margin-left 0.28s;
-    position: relative;
-  }
+.HideSideBar .LayoutViewHeader {
+  width: calc(100% - 60px);
+}
+
+.LayoutViewWrapper {
+  min-height: 100%;
+  margin-left: 210px;
+  transition: margin-left 0.28s;
+  position: relative;
 }
 </style>
