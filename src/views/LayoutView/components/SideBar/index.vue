@@ -31,7 +31,7 @@ import Menu from "./Menu.vue";
   background-color: #304156;
 
   .SideBar {
-    height: 60px;
+    height: 65px;
 
     img {
       width: 44px;

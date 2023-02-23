@@ -1,7 +1,7 @@
 <template>
   <el-menu
     router
-    text-color="#bfcbd9"
+    text-color="#A3A6AD"
     background-color="#304156"
     active-text-color="#f4f4f5"
     :uniqueOpened="true"
@@ -26,7 +26,11 @@ const activeMenu = computed(() => {
   return route.path;
 });
 const menus = computed(() => {
+  console.log(router.getRoutes());
   const filterRouteList = filterRoutes(router.getRoutes());
+
+  console.log(filterRouteList);
+
   return generateMenus(filterRouteList);
 });
 </script>

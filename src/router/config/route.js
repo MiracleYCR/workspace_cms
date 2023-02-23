@@ -13,6 +13,7 @@ function getChildrenRoutes(routes) {
       result.push(...route.children);
     }
   });
+  console.log(result);
   return result;
 }
 
