@@ -4,6 +4,10 @@
     <BreadCrumbComp class="BreadCrumbCompWrapper" />
 
     <div class="NavBarMenus">
+      <NavSearchComp
+        style="display: flex; align-items: center"
+        class="NavBarMenusItem hoverEffect"
+      />
       <ScreenFullComp class="NavBarMenusItem hoverEffect" />
 
       <el-dropdown class="AvatarWrapper" trigger="click">
@@ -33,6 +37,7 @@
 import CollapseComp from "@/components/Collapse/index.vue";
 import BreadCrumbComp from "@/components/BreadCrumb/index.vue";
 import ScreenFullComp from "@/components/ScreenFull/index.vue";
+import NavSearchComp from "@/components/NavSearch/index.vue";
 </script>
 
 <style lang="scss" scoped>

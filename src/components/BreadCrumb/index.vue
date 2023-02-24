@@ -47,7 +47,7 @@ watch(
 </script>
 
 <style lang="scss" scoped>
-.breadcrumb-wrapper {
+.BreadCrumbComp {
   display: inline-block;
   font-size: 14px;
   line-height: 50px;

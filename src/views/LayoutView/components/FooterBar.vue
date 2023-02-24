@@ -1,7 +1,5 @@
 <template>
-  <div class="FooterBar">
-    CMS 内容管理中心 | Copyright © {{ copyrightYear }}
-  </div>
+  <div class="FooterBar">Copyright © 松仁工作室 {{ copyrightYear }}</div>
 </template>
 
 <script setup>

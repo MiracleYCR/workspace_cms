@@ -1,4 +1,6 @@
-<template><div>123123</div></template>
+<template>
+  <div>station</div>
+</template>
 
 <script setup></script>
 

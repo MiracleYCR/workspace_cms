@@ -1,7 +1,6 @@
 import axios from "axios";
 import store from "@/store";
 import { ElMessage } from "element-plus";
-
 import { isCheckTimeout } from "@/utils/auth";
 
 const service = axios.create({
@@ -13,8 +12,6 @@ service.defaults.withCredentials = true;
 
 service.interceptors.request.use(
   (config) => {
-    config.headers.icode = "1BA3170F18B1DD6B";
-
     if (store.getters.token) {
       if (isCheckTimeout()) {
         store.dispatch("user/logout");
